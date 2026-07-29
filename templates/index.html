@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row align-items-center">
+
+        <!-- Left Side -->
+
+        <div class="col-lg-6">
+
+            <h1 class="display-4 fw-bold text-primary">
+
+                Student Task Manager
+
+            </h1>
+
+            <p class="lead mt-4">
+
+                Organize your daily tasks, assignments, projects,
+                and study schedule in one place.
+
+            </p>
+
+            <p>
+
+                Stay productive by creating tasks, setting priorities,
+                tracking deadlines, and marking completed work.
+
+            </p>
+
+            <div class="mt-4">
+
+                <a href="{{ url_for('register') }}"
+                   class="btn btn-primary btn-lg me-3">
+
+                    Get Started
+
+                </a>
+
+                <a href="{{ url_for('login') }}"
+                   class="btn btn-outline-primary btn-lg">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-6 text-center">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                 class="img-fluid"
+                 width="350"
+                 alt="Student">
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- Features -->
+
+<div class="container">
+
+    <h2 class="text-center mb-5">
+
+        Project Features
+
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-list-check fa-3x text-primary mb-3"></i>
+
+                    <h4>
+
+                        Manage Tasks
+
+                    </h4>
+
+                    <p>
+
+                        Create, update and delete tasks
+                        easily.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-calendar-days fa-3x text-success mb-3"></i>
+
+                    <h4>
+
+                        Due Dates
+
+                    </h4>
+
+                    <p>
+
+                        Track assignment deadlines
+                        without missing important work.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-chart-line fa-3x text-danger mb-3"></i>
+
+                    <h4>
+
+                        Productivity
+
+                    </h4>
+
+                    <p>
+
+                        Monitor completed and pending
+                        tasks through the dashboard.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- Why Choose -->
+
+<div class="container">
+
+    <h2 class="text-center mb-4">
+
+        Why Choose Student Task Manager?
+
+    </h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-3">
+
+            <h1 class="text-primary">
+
+                <i class="fa-solid fa-book"></i>
+
+            </h1>
+
+            <h5>Assignments</h5>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <h1 class="text-success">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </h1>
+
+            <h5>Time Management</h5>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <h1 class="text-warning">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+            </h1>
+
+            <h5>Goal Tracking</h5>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <h1 class="text-danger">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </h1>
+
+            <h5>Student Friendly</h5>
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- Call to Action -->
+
+<div class="container text-center">
+
+    <h2>
+
+        Ready to Stay Organized?
+
+    </h2>
+
+    <p class="mt-3">
+
+        Register today and start managing your academic
+        tasks efficiently.
+
+    </p>
+
+    <a href="{{ url_for('register') }}"
+       class="btn btn-success btn-lg">
+
+        Create Free Account
+
+    </a>
+
+</div>
+
+{% endblock %}

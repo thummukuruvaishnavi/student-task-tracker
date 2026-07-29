@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow-lg">
+
+            <div class="card-header bg-warning text-dark">
+
+                <h3 class="mb-0">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                    Edit Task
+
+                </h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <form method="POST">
+
+                    <!-- Task Title -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Task Title
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="title"
+                            value="{{ task.title }}"
+                            required>
+
+                    </div>
+
+                    <!-- Category -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Category
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="category"
+                            required>
+
+                            <option value="Study"
+                            {% if task.category=="Study" %}selected{% endif %}>
+                                Study
+                            </option>
+
+                            <option value="Assignment"
+                            {% if task.category=="Assignment" %}selected{% endif %}>
+                                Assignment
+                            </option>
+
+                            <option value="Project"
+                            {% if task.category=="Project" %}selected{% endif %}>
+                                Project
+                            </option>
+
+                            <option value="Exam"
+                            {% if task.category=="Exam" %}selected{% endif %}>
+                                Exam
+                            </option>
+
+                            <option value="Personal"
+                            {% if task.category=="Personal" %}selected{% endif %}>
+                                Personal
+                            </option>
+
+                            <option value="Other"
+                            {% if task.category=="Other" %}selected{% endif %}>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Priority -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Priority
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="priority"
+                            required>
+
+                            <option value="High"
+                            {% if task.priority=="High" %}selected{% endif %}>
+                                High
+                            </option>
+
+                            <option value="Medium"
+                            {% if task.priority=="Medium" %}selected{% endif %}>
+                                Medium
+                            </option>
+
+                            <option value="Low"
+                            {% if task.priority=="Low" %}selected{% endif %}>
+                                Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Due Date -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Due Date
+
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            name="due_date"
+                            value="{{ task.due_date }}"
+                            required>
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <div class="d-flex justify-content-between">
+
+                        <a href="{{ url_for('dashboard') }}"
+                           class="btn btn-secondary">
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                            Back
+
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-warning">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Update Task
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
